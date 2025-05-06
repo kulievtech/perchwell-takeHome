@@ -4,7 +4,7 @@
 
 A modern, reliable automation testing framework built with Playwright for testing Perchwell web application.
 
-## Features
+## ✨ Features
 
 -   Cross-browser testing (Chromium, Firefox, WebKit)
 -   Parallel test execution
@@ -12,6 +12,7 @@ A modern, reliable automation testing framework built with Playwright for testin
 -   Screenshot and video capture
 -   HTML test reports
 -   GitHub Actions integration for CI/CD
+-   Page Object Model pattern for maintainable tests
 
 ## 🛠 Setup Instructions
 
@@ -30,57 +31,99 @@ git clone https://github.com/kulievtech/perchwell-takeHome.git
 
 2. Install dependencies:
 
+```bash
 npm install
+```
 
 # or
 
+```bash
 yarn install
+```
 
 3. Install Playwright browsers:
 
+```bash
 npx playwright install
+```
 
-## Running Tests
+## 🗂 Project Structure
+
+├── config/ # Configuration files
+├── pages/ # Page Object classes
+│ ├── basePage.ts
+│ └── brokersPage.ts
+│ └── homePage.ts
+│ └── mlsPage.ts
+│ └── pageManager.ts
+├── tests/ # Test specifications
+│ ├── brokerPageTest.spec.ts
+│ └── mlsPageTest.spec.ts
+├── playwright-report/ # Test reports (generated)
+├── test-results/ # Test results (generated)
+├── playwright.config.ts # Playwright configuration
+├── package.json
+└── README.md
+
+## 📊 Running Tests
 
 ### Run all tests
 
+```bash
 npx playwright test
+```
 
 ### Run tests in a specific browser
 
+```bash
 npx playwright test --project=chromium
+```
 
 # or
 
+```bash
 npx playwright test --project=firefox
+```
 
 # or
 
+```bash
 npx playwright test --project=webkit
+```
 
 ### Run tests in headed mode (visible browser)
 
+```bash
 npx playwright test --headed
+```
 
 ### Run a specific test file
 
+```bash
 npx playwright test tests/brokerPageTest.spec.ts
+```
 
 # or
 
+```bash
 npx playwright test tests/mlsPageTest.spec.ts
+```
 
 ### Run tests with debug
 
+```bash
 npx playwright test --debug
+```
 
 ## Test Results
 
-## HTML Report
+### HTML Report
 
 After test execution, an HTML report is automatically generated. To view it:
 
+```bash
 npx playwright show-report
+```
 
 The report includes:
 
@@ -92,7 +135,7 @@ The report includes:
 
 The report files are stored in the playwright-report directory by default.
 
-## GitHub Actions Integration
+## ⚙️ GitHub Actions
 
 This repository includes a GitHub Actions workflow (.github/workflows/playwright.yml) that automatically runs the test suite on every push to the branch. The workflow:
 
@@ -112,16 +155,21 @@ playwright.config.ts - Main Playwright configuration (browsers, parallelization,
 
 package.json - Project dependencies and scripts
 
-## Additional Commands
+## 🔧 Useful Commands
 
-Update snapshots
+# Update snapshots
+
+```bash
 npx playwright test --update-snapshots
+```
 
-Codegen (record new tests)
+# Record new tests
 
+```bash
 npx playwright codegen https://www.perchwell.com/
+```
 
-## Troubleshooting
+## ❓ Troubleshooting
 
 If you encounter issues:
 
