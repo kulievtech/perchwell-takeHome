@@ -4,7 +4,7 @@
 
 A modern, reliable automation testing framework built with Playwright for testing Perchwell web application.
 
-## ✨ Features
+## Features
 
 -   Cross-browser testing (Chromium, Firefox, WebKit)
 -   Parallel test execution
@@ -35,7 +35,7 @@ git clone https://github.com/kulievtech/perchwell-takeHome.git
 npm install
 ```
 
-# or
+#### or
 
 ```bash
 yarn install
@@ -49,7 +49,7 @@ npx playwright install
 
 ## 🗂 Project Structure
 
-├── config/ # Configuration files
+```
 ├── pages/ # Page Object classes
 │ ├── basePage.ts
 │ └── brokersPage.ts
@@ -64,6 +64,7 @@ npx playwright install
 ├── playwright.config.ts # Playwright configuration
 ├── package.json
 └── README.md
+```
 
 ## 📊 Running Tests
 
@@ -79,13 +80,13 @@ npx playwright test
 npx playwright test --project=chromium
 ```
 
-# or
+#### or
 
 ```bash
 npx playwright test --project=firefox
 ```
 
-# or
+#### or
 
 ```bash
 npx playwright test --project=webkit
@@ -103,7 +104,7 @@ npx playwright test --headed
 npx playwright test tests/brokerPageTest.spec.ts
 ```
 
-# or
+#### or
 
 ```bash
 npx playwright test tests/mlsPageTest.spec.ts
@@ -115,7 +116,7 @@ npx playwright test tests/mlsPageTest.spec.ts
 npx playwright test --debug
 ```
 
-## Test Results
+## ✅ Test Results
 
 ### HTML Report
 
@@ -147,7 +148,7 @@ This repository includes a GitHub Actions workflow (.github/workflows/playwright
 
 You can view the test results in the "Actions" tab of the GitHub repository.
 
-## Configuration
+## 📋 Configuration
 
 The main configuration files are:
 
@@ -157,13 +158,13 @@ package.json - Project dependencies and scripts
 
 ## 🔧 Useful Commands
 
-# Update snapshots
+### Update snapshots
 
 ```bash
 npx playwright test --update-snapshots
 ```
 
-# Record new tests
+### Record new tests
 
 ```bash
 npx playwright codegen https://www.perchwell.com/
