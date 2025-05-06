@@ -1,4 +1,4 @@
-# Perchwell Automation Framework
+# 🚀 Perchwell Automation Framework
 
 ## Description
 
@@ -9,11 +9,11 @@ A modern, reliable automation testing framework built with Playwright for testin
 -   Cross-browser testing (Chromium, Firefox, WebKit)
 -   Parallel test execution
 -   Automatic waiting and assertions
--   Screenshot and video capture on failure
+-   Screenshot and video capture
 -   HTML test reports
 -   GitHub Actions integration for CI/CD
 
-## Setup Instructions
+## 🛠 Setup Instructions
 
 ### Prerequisites
 
@@ -24,7 +24,9 @@ A modern, reliable automation testing framework built with Playwright for testin
 
 1. Clone this repository:
 
+```bash
 git clone https://github.com/kulievtech/perchwell-takeHome.git
+```
 
 2. Install dependencies:
 
